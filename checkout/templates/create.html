@@ -9,7 +9,13 @@
   </ol>
 </nav>
 
-<h2 class="section-title">Checkout</h2>
+<div class="d-flex flex-column flex-md-row align-items-md-center justify-content-between mb-4">
+  <div>
+    <h1 class="h3 mb-2" style="letter-spacing:0.08em; text-transform:uppercase;">Checkout</h1>
+    <p class="text-muted mb-0">Just a few details and we’ll prepare your delivery.</p>
+  </div>
+  <span class="badge-soft mt-3 mt-md-0">Secure form</span>
+</div>
 
 {% if error %}
   <div class="alert alert-danger">{{ error }}</div>
@@ -48,8 +54,8 @@
             </div>
           </div>
 
-          <div class="d-flex justify-content-between mt-4">
-            <a href="{% url 'cart:cart_detail' %}" class="btn btn-outline-dark rounded-pill px-4">Back to cart</a>
+          <div class="d-flex justify-content-between flex-wrap gap-3 mt-4">
+            <a href="{% url 'cart:cart_detail' %}" class="btn-ghost">Back to cart</a>
             <button type="submit" class="btn btn-outline-dark rounded-pill px-4">Place order</button>
           </div>
         </form>
@@ -94,6 +100,7 @@
             <span>Total</span>
             <span>${{ cart.get_total_price }}</span>
           </div>
+          <div class="highlight-callout mt-3">We’ll send tracking details as soon as your order ships.</div>
         {% else %}
           <p>Your cart is empty.</p>
           <a href="/" class="btn btn-outline-dark rounded-pill px-4">Go shopping</a>

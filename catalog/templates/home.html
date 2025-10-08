@@ -7,9 +7,13 @@
 <!-- Hero -->
 <section class="hero mb-5">
   <div class="container-small mx-auto" style="max-width: 720px;">
-    <h1>Timeless essentials for everyday living</h1>
-    <p>Considered pieces, quiet silhouettes, and thoughtful details designed to fit seamlessly into your routine.</p>
-    <a href="{% url 'product_list' %}" class="btn-link-minimal">Explore products</a>
+    <span class="hero-eyebrow">New season edit</span>
+    <h1>Timeless essentials with a soft point of view</h1>
+    <p>Layer your everyday with neutral textures, sculpted shapes, and thoughtful finishes that feel relaxed yet polished.</p>
+    <div class="d-flex justify-content-center flex-wrap gap-3">
+      <a href="{% url 'product_list' %}" class="btn-link-minimal">Explore products</a>
+      <a href="{% url 'product_list' %}" class="btn-ghost">Browse all categories</a>
+    </div>
   </div>
 </section>
 
@@ -21,7 +25,8 @@
       <div class="col">
         <a href="{% url 'product_by_category' category.slug %}" class="text-decoration-none text-reset">
           <div class="category-card h-100">
-            <h5 class="mb-0">{{ category.name }}</h5>
+            <h5 class="mb-2">{{ category.name }}</h5>
+            <p class="text-muted small mb-0">Curated to mix and match effortlessly.</p>
           </div>
         </a>
       </div>
@@ -29,8 +34,31 @@
   </div>
 </section>
 
+<section class="feature-band">
+  <div class="row row-cols-1 row-cols-md-3 g-3 g-md-4">
+    <div class="col">
+      <div class="feature-tile">
+        <span>Considered quality</span>
+        <p>Natural fibres, soft-touch ceramics, and lasting craftsmanship chosen for everyday resilience.</p>
+      </div>
+    </div>
+    <div class="col">
+      <div class="feature-tile">
+        <span>Balanced palette</span>
+        <p>Warm neutrals with gentle contrast add depth without overpowering your space.</p>
+      </div>
+    </div>
+    <div class="col">
+      <div class="feature-tile">
+        <span>Mindful details</span>
+        <p>Soft curves, rounded edges, and tactile finishes create a quiet sense of luxury.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- Featured Products -->
-<section>
+<section class="mt-5">
   <h3 class="section-title">Featured products</h3>
   <div class="row row-cols-1 row-cols-md-3 g-4">
     {% for product in featured_products %}
@@ -42,11 +70,29 @@
           <div class="card-body text-center">
             <h5 class="card-title">{{ product.title }}</h5>
             <p class="text-muted mb-3">${{ product.price }}</p>
+            <div class="d-flex justify-content-center gap-2 mb-3">
+              <span class="badge-soft">In focus</span>
+            </div>
             <a href="{% url 'product_detail' product.slug %}" class="btn btn-outline-dark btn-sm rounded-pill px-3">View details</a>
           </div>
         </div>
       </div>
     {% endfor %}
+  </div>
+</section>
+
+<section class="collection-highlight mt-5">
+  <div class="row align-items-center g-4">
+    <div class="col-lg-7">
+      <span class="badge-soft">Limited drop</span>
+      <h3>Soft Structure Capsule</h3>
+      <p>Explore a limited run of sculpted seating, understated lighting, and handcrafted vessels designed to add warmth and rhythm to minimalist interiors.</p>
+    </div>
+    <div class="col-lg-5">
+      <div class="highlight-callout">
+        <strong>Designer note:</strong> Pair these pieces with crisp cotton or linen to create a balanced, lived-in atmosphere.
+      </div>
+    </div>
   </div>
 </section>
 

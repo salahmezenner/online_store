@@ -1,4 +1,4 @@
-# 🛍️ MyStore – Full-Stack E-Commerce Web App
+# 🛍️   SalahStore – Full-Stack E-Commerce Web App
 
 > A modern online shopping experience built with **Django** and **Bootstrap** — featuring products, categories, a dynamic cart, and a secure checkout flow.
 
@@ -49,31 +49,47 @@ It focuses on providing a clean, intuitive shopping experience with real-world f
 | **Database** | SQLite (local) / PostgreSQL (prod) |
 
 ---
+
 ## 💻 Setup Instructions
 
-1️⃣ Clone the repo  
-```bash
-git clone https://github.com/yourusername/mystore.git
+### 1️⃣ Clone the repository  
+git clone https://github.com/yourusername/mystore.git 
+
 cd mystore
-2️⃣ Create a virtual environment
 
-bash
-Copy code
+### 2️⃣ Create a virtual environment
+
 python -m venv venv
-source venv/bin/activate
-3️⃣ Install dependencies
 
-bash
-Copy code
+source venv/bin/activate   # On Windows: venv\Scripts\activate
+
+### 3️⃣ Install dependencies
+
 pip install -r requirements.txt
-4️⃣ Run migrations
 
-bash
-Copy code
+### 4️⃣ Run migrations
+
 python manage.py migrate
-5️⃣ Run the app
 
-bash
-Copy code
+### 5️⃣ Run the app
+
 python manage.py runserver
-Open your browser at 👉 http://127.0.0.1:8000/
+
+Then open your browser at 👉 http://127.0.0.1:8000/
+
+---
+
+## 🏁 Future Enhancements
+
+🔹 Add user authentication (login/register)
+
+🔹 Integrate Stripe payments
+
+🔹 Add order history for users
+
+🔹 Deploy to Render with a live domain
+
+## 👨‍💻 Author
+Mezenner Salah
+📧 mezennersalah@yahoo.com
+

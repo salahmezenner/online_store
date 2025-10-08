@@ -1,0 +1,59 @@
+body {
+    background-color: #f8f9fa;
+}
+.card img {
+    height: 220px;
+    object-fit: cover;
+}
+footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+.card img {
+    height: 220px;
+    width: 100%;
+    object-fit: contain;   /* used to be cover */
+    background-color: #fff;
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+}
+.hero-bg {
+    background: url("/static/images/hero.jpg") center/cover no-repeat;
+    color: white;
+}
+.hero-text {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 50px;
+}
+.btn-hover-dark:hover {
+  background-color: var(--bs-dark) !important;
+  color: var(--bs-light) !important;
+  border-color: var(--bs-dark) !important;
+  transform: translateY(-2px);
+  transition: all 0.2s ease-in-out;
+}
+
+
+.card-hover {
+  transition: all 0.3s ease-in-out;
+}
+
+.card-hover:hover {
+  transform: translateY(-5px);
+  background-color: var(--bs-dark);
+  color: var(--bs-light);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+/* Smooth animation */
+.product-card {
+  transition: all 0.3s ease-in-out;
+}
+
+/* Hover effect */
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  border-color: var(--bs-primary);
+}
+

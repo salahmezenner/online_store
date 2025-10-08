@@ -1,0 +1,143 @@
+[
+  {
+    "model": "catalog.category",
+    "pk": 1,
+    "fields": { "name": "Electronics", "slug": "electronics" }
+  },
+  {
+    "model": "catalog.category",
+    "pk": 2,
+    "fields": { "name": "Books", "slug": "books" }
+  },
+  {
+    "model": "catalog.category",
+    "pk": 3,
+    "fields": { "name": "Clothing", "slug": "clothing" }
+  },
+  {
+    "model": "catalog.category",
+    "pk": 4,
+    "fields": { "name": "Home & Kitchen", "slug": "home-kitchen" }
+  },
+
+  {
+    "model": "catalog.product",
+    "pk": 1,
+    "fields": {
+      "category": 1,
+      "title": "Wireless Bluetooth Headphones",
+      "slug": "wireless-bluetooth-headphones",
+      "description": "Noise-cancelling over-ear headphones with 30-hour battery life.",
+      "price": "120.00",
+      "stock": 25,
+      "is_active": true,
+      "image": "products/headphones.jpg",
+      "created_at": "2025-10-08T09:00:00Z"
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 2,
+    "fields": {
+      "category": 1,
+      "title": "Smartphone Charger 25W",
+      "slug": "smartphone-charger-25w",
+      "description": "Fast USB-C wall charger compatible with most modern devices.",
+      "price": "18.50",
+      "stock": 100,
+      "is_active": true,
+      "image": "products/charger.jpg",
+      "created_at": "2025-10-08T09:05:00Z"
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 3,
+    "fields": {
+      "category": 2,
+      "title": "Django for Beginners",
+      "slug": "django-for-beginners",
+      "description": "A hands-on guide to building modern web apps with Django.",
+      "price": "39.99",
+      "stock": 50,
+      "is_active": true,
+      "image": "products/book_django.jpg",
+      "created_at": "2025-10-08T09:10:00Z"
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 4,
+    "fields": {
+      "category": 2,
+      "title": "Deep Learning Illustrated",
+      "slug": "deep-learning-illustrated",
+      "description": "Visual and practical introduction to deep learning concepts.",
+      "price": "49.95",
+      "stock": 30,
+      "is_active": true,
+      "image": "products/book_dl.jpg",
+      "created_at": "2025-10-08T09:15:00Z"
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 5,
+    "fields": {
+      "category": 3,
+      "title": "Men’s Classic White T-Shirt",
+      "slug": "mens-classic-white-tshirt",
+      "description": "Soft cotton t-shirt with a comfortable regular fit.",
+      "price": "15.00",
+      "stock": 80,
+      "is_active": true,
+      "image": "products/tshirt.jpg",
+      "created_at": "2025-10-08T09:20:00Z"
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 6,
+    "fields": {
+      "category": 3,
+      "title": "Women’s Denim Jacket",
+      "slug": "womens-denim-jacket",
+      "description": "Classic blue denim jacket with button closure and two pockets.",
+      "price": "49.99",
+      "stock": 40,
+      "is_active": true,
+      "image": "products/denim_jacket.jpg",
+      "created_at": "2025-10-08T09:25:00Z"
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 7,
+    "fields": {
+      "category": 4,
+      "title": "Ceramic Coffee Mug",
+      "slug": "ceramic-coffee-mug",
+      "description": "11oz ceramic mug, dishwasher and microwave safe.",
+      "price": "9.99",
+      "stock": 200,
+      "is_active": true,
+      "image": "products/mug.jpg",
+      "created_at": "2025-10-08T09:30:00Z"
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 8,
+    "fields": {
+      "category": 4,
+      "title": "Non-stick Frying Pan 28cm",
+      "slug": "non-stick-frying-pan-28cm",
+      "description": "Durable non-stick pan compatible with induction stoves.",
+      "price": "35.50",
+      "stock": 60,
+      "is_active": true,
+      "image": "products/frying_pan.jpg",
+      "created_at": "2025-10-08T09:35:00Z"
+    }
+  }
+]

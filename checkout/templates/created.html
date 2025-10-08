@@ -3,17 +3,13 @@
 {% block content %}
 
 <div class="row justify-content-center">
-  <div class="col-lg-8">
-    <div class="card shadow-sm border-success">
-      <div class="card-header bg-success text-white">
-        <strong>Thank you!</strong>
-      </div>
-      <div class="card-body text-center py-5">
-        <h3 class="mb-3">Your order was created successfully.</h3>
-        <p class="text-muted">We’ll reach out at <strong>{{ order.email }}</strong>.</p>
-        <p><span class="badge bg-dark">Order ID: {{ order.id }}</span></p>
-        <a href="/" class="btn btn-primary mt-3">Continue shopping</a>
-      </div>
+  <div class="col-lg-7">
+    <div class="summary-card p-5 text-center">
+      <p class="text-uppercase text-muted mb-3" style="letter-spacing:0.2em; font-size:0.85rem;">Order confirmed</p>
+      <h3 class="mb-3">Thank you for your purchase.</h3>
+      <p class="text-muted mb-4">We’ll send updates to <strong>{{ order.email }}</strong>.</p>
+      <p class="order-badge mb-4">Order ID {{ order.id }}</p>
+      <a href="/" class="btn btn-outline-dark rounded-pill px-4">Continue shopping</a>
     </div>
   </div>
 </div>

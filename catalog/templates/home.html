@@ -4,59 +4,50 @@
 
 {% block content %}
 
-<!-- 🖼️ Hero Section -->
-<div class="p-5 mb-4 hero-bg rounded-3">
-  <div class="container py-5 text-center">
-    <h1 class="display-5 fw-bold text-light">Welcome to MyStore 🛍️</h1>
-    <p class="col-lg-8 mx-auto fs-5 text-light">Discover the latest products and best deals.</p>
-    <a href="{% url 'product_list' %}" 
-   class="btn btn-light btn-lg mt-3 border border-dark text-dark fw-semibold shadow-sm 
-          btn-hover-dark">
-   Shop Now
-</a>
-
+<!-- Hero -->
+<section class="hero mb-5">
+  <div class="container-small mx-auto" style="max-width: 720px;">
+    <h1>Timeless essentials for everyday living</h1>
+    <p>Considered pieces, quiet silhouettes, and thoughtful details designed to fit seamlessly into your routine.</p>
+    <a href="{% url 'product_list' %}" class="btn-link-minimal">Explore products</a>
   </div>
-</div>
+</section>
 
-
-<!-- 🏷️ Categories -->
-<div class="container mb-5">
-  <h3 class="text-center mb-4">Shop by Category</h3>
-<div class="row row-cols-2 row-cols-md-4 g-3">
-  {% for category in categories %}
-    <div class="col">
-      <a href="{% url 'product_by_category' category.slug %}" class="text-decoration-none text-dark">
-        <div class="card text-center h-100 shadow-sm card-hover">
-          <div class="card-body">
-            <h5 class="card-title">{{ category.name }}</h5>
+<!-- Categories -->
+<section class="mb-5">
+  <h3 class="section-title">Shop by category</h3>
+  <div class="row row-cols-2 row-cols-md-4 g-3 g-md-4">
+    {% for category in categories %}
+      <div class="col">
+        <a href="{% url 'product_by_category' category.slug %}" class="text-decoration-none text-reset">
+          <div class="category-card h-100">
+            <h5 class="mb-0">{{ category.name }}</h5>
           </div>
-        </div>
-      </a>
-    </div>
-  {% endfor %}
-</div>
-</div>
+        </a>
+      </div>
+    {% endfor %}
+  </div>
+</section>
 
-<!-- ⭐ Featured Products -->
-<div class="container">
-  <h3 class="text-center mb-4">Featured Products</h3>
+<!-- Featured Products -->
+<section>
+  <h3 class="section-title">Featured products</h3>
   <div class="row row-cols-1 row-cols-md-3 g-4">
     {% for product in featured_products %}
       <div class="col">
-        <div class="card h-100 shadow-sm product-card">
+        <div class="card h-100">
           {% if product.image %}
-            <img src="{{ product.image.url }}" class="card-img-top" alt="{{ product.title }}"
-                style="height:220px;object-fit:contain;">
+            <img src="{{ product.image.url }}" class="card-img-top" alt="{{ product.title }}">
           {% endif %}
           <div class="card-body text-center">
             <h5 class="card-title">{{ product.title }}</h5>
-            <p class="text-muted mb-2">${{ product.price }}</p>
-            <a href="{% url 'product_detail' product.slug %}" class="btn btn-outline-primary btn-sm">View</a>
+            <p class="text-muted mb-3">${{ product.price }}</p>
+            <a href="{% url 'product_detail' product.slug %}" class="btn btn-outline-dark btn-sm rounded-pill px-3">View details</a>
           </div>
         </div>
       </div>
     {% endfor %}
   </div>
-</div>
+</section>
 
 {% endblock %}

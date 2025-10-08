@@ -1,20 +1,20 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap");
 
 :root {
-  --surface: #f6f1ea;
-  --surface-soft: #fbf8f3;
-  --surface-strong: #ede2d4;
-  --border: #e3d7c8;
-  --text: #1f1912;
-  --muted: #766855;
-  --accent: #c57a44;
-  --accent-dark: #a36632;
-  --accent-light: #f4dfcd;
+  --surface: #fdf4e6;
+  --surface-soft: #fff8f0;
+  --surface-strong: #f3e2d1;
+  --border: #ead9c6;
+  --text: #231a12;
+  --muted: #7d6a56;
+  --accent: #d88c5a;
+  --accent-dark: #b8743f;
+  --accent-light: #fbe3cf;
 }
 
 body {
   font-family: "Inter", "Helvetica Neue", Arial, sans-serif;
-  background: linear-gradient(180deg, var(--surface-soft) 0%, #ffffff 65%);
+  background: linear-gradient(180deg, var(--surface-soft) 0%, #ffffff 70%);
   color: var(--text);
   letter-spacing: 0.01em;
 }
@@ -105,16 +105,88 @@ a:focus {
 
 
 .hero {
-  background: linear-gradient(135deg, var(--surface-soft) 0%, var(--surface-strong) 100%);
+  background: linear-gradient(140deg, var(--surface-soft) 0%, var(--surface-strong) 100%);
   border: 1px solid var(--border);
   border-radius: 28px;
   padding: 4.5rem 2.75rem;
   text-align: center;
-  box-shadow: 0 20px 55px rgba(31, 25, 18, 0.06);
+  box-shadow: 0 22px 60px rgba(35, 26, 18, 0.07);
 }
 
 .container-small {
   margin: 0 auto;
+}
+
+.search-panel {
+  background: rgba(255, 255, 255, 0.82);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 1.15rem 1.35rem;
+  box-shadow: 0 12px 30px rgba(35, 26, 18, 0.08);
+  min-width: 280px;
+}
+
+.search-panel label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--muted);
+  margin-bottom: 0.75rem;
+  display: block;
+}
+
+.search-input-wrap {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  background: linear-gradient(135deg, var(--surface) 0%, #ffffff 100%);
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  padding: 0.6rem 0.85rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.search-input-wrap:focus-within {
+  border-color: var(--accent-light);
+  box-shadow: 0 10px 24px rgba(216, 140, 90, 0.25);
+}
+
+.search-input-wrap svg {
+  width: 18px;
+  height: 18px;
+  stroke: var(--muted);
+  flex-shrink: 0;
+}
+
+.search-input {
+  border: none;
+  background: transparent;
+  width: 100%;
+  font-size: 0.95rem;
+  color: var(--text);
+}
+
+.search-input:focus {
+  outline: none;
+}
+
+.search-empty {
+  border: 1px dashed var(--border);
+  border-radius: 18px;
+  padding: 2.75rem 1.5rem;
+  background: linear-gradient(160deg, rgba(251, 227, 207, 0.4) 0%, rgba(255, 255, 255, 0.65) 100%);
+  max-width: 480px;
+}
+
+.search-empty h3 {
+  font-size: 1.1rem;
+  letter-spacing: 0.02em;
+  margin-bottom: 0.75rem;
+}
+
+.search-empty p {
+  margin-bottom: 0;
+  color: var(--muted);
 }
 
 .hero-eyebrow {

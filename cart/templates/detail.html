@@ -49,11 +49,8 @@
     <div class="totals">
       <span class="text-muted">Subtotal</span>
       <span>$<span id="cart-total">{{ cart.get_total_price }}</span></span>
-      <span class="text-muted">Shipping</span>
-      <span>Calculated at checkout</span>
     </div>
     <hr>
-    <div class="highlight-callout mb-3">Orders over $150 ship on us—no code needed.</div>
     <div class="d-flex justify-content-between gap-3 flex-wrap">
       <a href="{% url 'product_list' %}" class="btn-ghost flex-fill text-center">Continue browsing</a>
       <a href="{% url 'checkout:order_create' %}" class="btn btn-outline-dark flex-fill rounded-pill">Proceed to checkout</a>

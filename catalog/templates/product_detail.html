@@ -12,7 +12,7 @@
            style="max-width: 440px; height: auto; object-fit: contain; border:1px solid var(--border); border-radius: 22px; padding:1.75rem; background: linear-gradient(180deg, #ffffff 0%, var(--surface-soft) 100%);">
       {% endif %}
       <div class="highlight-callout mt-3 d-inline-block text-start">
-        <strong>Design tip:</strong> Layer with contrasting textures to let the silhouette stand out.
+        <strong>{{ product.title }} : </strong> {{ product.description }}
       </div>
     </div>
     <div class="col-md-6">
@@ -26,14 +26,6 @@
             <li class="d-flex justify-content-between align-items-center">
               <span class="text-muted">Availability</span>
               <span>{{ product.stock }} in stock</span>
-            </li>
-            <li class="d-flex justify-content-between align-items-center">
-              <span class="text-muted">Shipping</span>
-              <span>Complimentary on orders over $150</span>
-            </li>
-            <li class="d-flex justify-content-between align-items-center">
-              <span class="text-muted">Materials</span>
-              <span>Hand-finished with mindful sourcing</span>
             </li>
           </ul>
         </div>

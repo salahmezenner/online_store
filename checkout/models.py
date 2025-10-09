@@ -4,7 +4,7 @@ from catalog.models import Product
 class Order(models.Model):
     first_name = models.CharField(max_length=50)
     last_name = models.CharField(max_length=50)
-    email = models.EmailField()
+    phone_number = models.CharField(max_length=20)
     address = models.CharField(max_length=250)
     city = models.CharField(max_length=100)
     created_at = models.DateTimeField(auto_now_add=True)
@@ -28,3 +28,25 @@ class OrderItem(models.Model):
 
     def get_cost(self):
         return self.price * self.quantity
+
+
+class CheckoutSettings(models.Model):
+    default_whatsapp_number = models.CharField(
+        max_length=20,
+        help_text="WhatsApp number that will receive order notifications. Include country code."
+    )
+    updated_at = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        verbose_name = "Checkout setting"
+        verbose_name_plural = "Checkout settings"
+
+    def __str__(self):
+        return "Checkout Settings"
+
+    @classmethod
+    def get_default_whatsapp_number(cls):
+        settings_obj = cls.objects.first()
+        if settings_obj:
+            return settings_obj.default_whatsapp_number
+        return None
